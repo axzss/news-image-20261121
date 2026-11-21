@@ -48,6 +48,7 @@ def main(argv=None):
     if args.verify:
         same = digest(BUNDLED) == digest(target)
         print("verify:", "identical" if same else "MISMATCH")
+        print("sha256:", digest(target))
         return 0 if same else 1
     return 0
 
